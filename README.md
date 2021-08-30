@@ -39,6 +39,9 @@ Sendo a post request to *http://localhost:5001/register/{state}* and you should 
 
 ## Expected Result
 
+Request:
+![Request](https://user-images.githubusercontent.com/32064166/131373278-95d8c7da-24eb-47ee-8c9c-db90015c6f14.png)
+
 APM
 ![APM](https://user-images.githubusercontent.com/32064166/131372368-2b1ceeee-272f-4e02-b5ee-df6a4bad2a8c.png)
 
