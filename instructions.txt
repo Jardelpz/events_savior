@@ -1,9 +1,0 @@
-Criar uma network [docker network create elastic_t]
-usar essa network externa pra os dois composes
-
-cd producer
-docker-compose up
-
-
-cd consumer
-docker-compose up
