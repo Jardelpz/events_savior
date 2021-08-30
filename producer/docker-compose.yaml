@@ -1,0 +1,89 @@
+version: '3'
+services:
+  app:
+    container_name: producer
+    build: .
+    ports:
+      - 5001:5000
+    depends_on:
+      - redis
+    restart: always
+    networks:
+      - default
+      - elastic_t
+
+  redis:
+    container_name: redis_p
+    image: redis
+    ports:
+      - 6379:6379
+    networks:
+      - elastic_t
+
+  redis-commander:
+    container_name: redis-commander_p
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - 8082:8081
+    networks:
+      - elastic_t
+
+  elasticsearch:
+    container_name: elasticsearch_p
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+    networks:
+      - elastic_t
+
+  kibana:
+    container_name: kibana_p
+    image: docker.elastic.co/kibana/kibana:7.14.0
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch_p:9200
+    ports:
+      - 5601:5601
+    links:
+      - elasticsearch
+    depends_on:
+      - elasticsearch
+    networks:
+      - elastic_t
+
+  apm:
+    container_name: apm_p
+    image: docker.elastic.co/apm/apm-server:7.14.0
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch_p:9200
+    ports:
+      - 8200:8200
+    links:
+      - elasticsearch
+      - kibana
+    depends_on:
+      - elasticsearch
+      - kibana
+    networks:
+      - elastic_t
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq_p
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - elastic_t
+
+networks:
+  elastic_t:
+    external:
+      name: elastic_t

@@ -1,0 +1,8 @@
+flask
+redis
+flask_restful
+elastic-apm
+blinker
+requests
+elasticsearch
+pika

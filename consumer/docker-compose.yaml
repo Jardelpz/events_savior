@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    container_name: consumer
+    build: .
+    restart: always
+    networks:
+      - default
+      - elastic_t
+
+networks:
+  elastic_t:
+    external:
+      name: elastic_t
