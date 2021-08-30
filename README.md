@@ -34,7 +34,7 @@ Enter the two directories (producer and consumer) and start their respective doc
     make docker_run
 
 
-Sendo a post request to *http://localhost:5001/insert/{state}* and you should see the result like on next step below:
+Sendo a post request to *http://localhost:5001/register/{state}* and you should see the result like on next step below:
 
 
 ## Expected Result
