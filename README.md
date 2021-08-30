@@ -1,9 +1,9 @@
 # Events Savior
 
-Este projeto consiste em uma demonstração do armazenamento de eventos em uma aplicação.
+This project consists of a demonstration of event storage in an application.
 
 
-## Tecnologias
+## Technologies
 
 * RabbitMQ
 * Redis
@@ -15,23 +15,21 @@ Este projeto consiste em uma demonstração do armazenamento de eventos em uma a
 
 ## How it works
 
-O producer recebe uma tarefa de buscar todas cidades de um estado, além de salvar isso em cache,
-envia para uma fila RabbitMQ, chamada *city*. 
+The producer receives a task to fetch all cities in a state, in addition to saving this in cache, sends it to a RabbitMQ queue, called *city*.
 
-
-De outro lado, temos um simples consumidor dessa fila, trabalhando apenas com um worker, consumindo a mensagem e salvando as informação no Elastic.
+On the other hand, we have a simple consumer of this queue, working only with a worker, consuming the messages and saving the information in Elastic.
 
 
 ## Environment
 
-Este projeto consiste em dois microserviços atuando dentro de uma mesma network
+This project consists of two microservices acting within the same network
 
-Para Rodar o projeto, neste sentido, é preciso criar um network localmente: 
+In order to Run the project, in this sense, it is necessary to create a network locally:
 
 
     docker network create elastic_t
 
-Entrar nos dois diretórios (producer e consumer) e iniciar os seus respectivos docker-compose: 
+Enter the two directories (producer and consumer) and start their respective docker-compose:
     
     make docker_run
 
