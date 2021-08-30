@@ -1,4 +1,4 @@
-Crirar uma network [docker network create elastic_t]
+Criar um network [docker network create elastic_t]
 usar essa network externa pra os dois composes
 
 cd producer
