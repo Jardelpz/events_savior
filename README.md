@@ -36,10 +36,10 @@ Enter the two directories (producer and consumer) and start their respective doc
 
 ## Expected Result
 
-![achiteture]("https://user-images.githubusercontent.com/32064166/131372368-2b1ceeee-272f-4e02-b5ee-df6a4bad2a8c.png")
+![achiteture](https://user-images.githubusercontent.com/32064166/131372368-2b1ceeee-272f-4e02-b5ee-df6a4bad2a8c.png)
 
-![achiteture]("https://user-images.githubusercontent.com/32064166/131372383-1aee2841-d957-4349-8cc6-a1bddc3b3ec2.png")
+![achiteture](https://user-images.githubusercontent.com/32064166/131372383-1aee2841-d957-4349-8cc6-a1bddc3b3ec2.png)
 
-![achiteture]("https://user-images.githubusercontent.com/32064166/131372389-d25a3c64-2308-42a1-94f2-546eb1011045.png")
+![achiteture](https://user-images.githubusercontent.com/32064166/131372389-d25a3c64-2308-42a1-94f2-546eb1011045.png)
 
-![achiteture]("https://user-images.githubusercontent.com/32064166/131372409-6a8d40d4-8e08-4eb3-872d-ad3b3ed039de.png"")
+![achiteture](https://user-images.githubusercontent.com/32064166/131372409-6a8d40d4-8e08-4eb3-872d-ad3b3ed039de.png)
