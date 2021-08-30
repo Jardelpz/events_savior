@@ -1,4 +1,4 @@
-docker network create elastic
+
 docker pull docker.elastic.co/elasticsearch/elasticsearch:7.14.0
 docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.14.0
 
@@ -14,5 +14,5 @@ Usar Aws sqs pra enviar um payload (localstack)
 Celery
 
 
-Crirar uma network
+Crirar uma network [docker network create elastic_t]
 usar essa network externa pra os dois composes
