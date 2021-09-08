@@ -2,6 +2,9 @@
 
 This project consists of a demonstration of event storage in an application.
 
+## Medium Link:
+
+ https://medium.com/@jardel123zermiani/building-an-events-savior-with-rabbitmq-and-elasticsearch-75ae7d731d71
 
 ## Technologies
 
